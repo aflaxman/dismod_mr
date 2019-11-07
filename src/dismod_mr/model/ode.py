@@ -49,7 +49,7 @@ def f(a, susceptible_condition,
     return np.array([ds_da, dc_da])
 
 
-def ode_function(susceptible, condition, num_step, age_local, all_cause, incidence, remission, excess, s0, c0, scipy=False):
+def ode_function(susceptible, condition, num_step, age_local, all_cause, incidence, remission, excess, s0, c0, scipy):
     if not isinstance(scipy, bool):
         raise Exception('scipy flag in ode_function must be of type bool')
 
