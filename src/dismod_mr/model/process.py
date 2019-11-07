@@ -388,7 +388,7 @@ def consistent(model, reference_area='all', reference_sex='total', reference_yea
 
         susceptible = np.zeros(len(ages))
         condition = np.zeros(len(ages))
-        dismod_mr.model.ode.ode_function(susceptible, condition, num_step, ages, m_all, i, r, f, 1 - C0, C0, False)
+        dismod_mr.model.ode.ode_function(susceptible, condition, num_step, ages, m_all, i, r, f, 1 - C0, C0, True)
 
         p = condition / (susceptible + condition)
         p[np.isnan(p)] = 0.
